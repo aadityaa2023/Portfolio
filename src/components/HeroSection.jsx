@@ -25,11 +25,11 @@ const HeroSection = () => {
   };
 
   return (
-    <Box id="about" sx={{ py: { xs: 8, md: 12 } }}>
+    <Box id="about" sx={{ pt: { xs: 2, md: 4 }, pb: { xs: 8, md: 12 } }}>
       <Grid container spacing={6} alignItems="center" component={motion.div} variants={containerVariants} initial="hidden" animate="visible">
         <Grid item xs={12} md={7} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
           <motion.div variants={itemVariants}>
-            <Box sx={{ display: 'inline-block', mb: 2, px: 2, py: 0.5, borderRadius: 4, backgroundColor: 'rgba(179,136,255,0.1)', border: '1px solid rgba(179,136,255,0.2)' }}>
+            <Box sx={{ display: 'inline-block', mb: 2, px: 2, py: 0.5, borderRadius: 0, backgroundColor: 'rgba(179,136,255,0.1)', border: '1px solid rgba(179,136,255,0.2)' }}>
               <Typography variant="subtitle2" sx={{ color: 'primary.main', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                 Software Engineer
               </Typography>
@@ -90,23 +90,14 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
           >
             <Box sx={{ position: 'relative' }}>
-              <Box 
-                sx={{ 
-                  position: 'absolute', 
-                  top: -20, right: -20, bottom: -20, left: -20, 
-                  background: 'linear-gradient(135deg, rgba(179,136,255,0.4) 0%, rgba(0,230,118,0.4) 100%)', 
-                  filter: 'blur(40px)', 
-                  borderRadius: '50%', 
-                  zIndex: -1 
-                }} 
-              />
+
               <Avatar
                 src={profileImg}
                 alt="Aditya Mishra"
                 sx={{
                   width: { xs: 260, md: 340 },
                   height: { xs: 260, md: 340 },
-                  borderRadius: '30px', // Squircle shape instead of perfect circle
+                  borderRadius: 0, // Sharp square
                   boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
                   border: '1px solid rgba(255,255,255,0.1)',
                 }}

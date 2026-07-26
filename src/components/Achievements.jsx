@@ -20,7 +20,7 @@ const Achievements = () => {
         transition={{ duration: 0.6 }}
       >
         <Typography variant="h2" sx={{ mb: 8, display: 'flex', alignItems: 'center' }}>
-          <Box component="span" sx={{ color: 'primary.main', mr: 2, fontSize: '1.5rem', fontWeight: 600 }}>04.</Box> Achievements
+          Achievements
         </Typography>
       </motion.div>
 
@@ -33,9 +33,9 @@ const Achievements = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             style={{ height: '100%' }}
           >
-            <Paper sx={{ height: '100%', borderRadius: 6, p: { xs: 4, md: 5 }, background: 'linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)' }}>
+            <Paper sx={{ height: '100%', borderRadius: 0, p: { xs: 4, md: 5 }, background: 'linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)' }}>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 4 }}>
-                <Box sx={{ p: 1.5, borderRadius: 3, backgroundColor: 'rgba(0,230,118,0.1)', color: 'secondary.main', mr: 2 }}>
+                <Box sx={{ p: 1.5, borderRadius: 0, backgroundColor: 'rgba(0,230,118,0.1)', color: 'secondary.main', mr: 2 }}>
                   <EmojiEventsIcon fontSize="medium" />
                 </Box>
                 <Typography variant="h4" sx={{ fontWeight: 600, color: 'text.primary' }}>
@@ -73,9 +73,9 @@ const Achievements = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             style={{ height: '100%' }}
           >
-            <Paper sx={{ height: '100%', borderRadius: 6, p: { xs: 4, md: 5 }, background: 'linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)' }}>
+            <Paper sx={{ height: '100%', borderRadius: 0, p: { xs: 4, md: 5 }, background: 'linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)' }}>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 4 }}>
-                <Box sx={{ p: 1.5, borderRadius: 3, backgroundColor: 'rgba(179,136,255,0.1)', color: 'primary.main', mr: 2 }}>
+                <Box sx={{ p: 1.5, borderRadius: 0, backgroundColor: 'rgba(179,136,255,0.1)', color: 'primary.main', mr: 2 }}>
                   <WorkspacePremiumIcon fontSize="medium" />
                 </Box>
                 <Typography variant="h4" sx={{ fontWeight: 600, color: 'text.primary' }}>

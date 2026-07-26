@@ -33,7 +33,7 @@ const Education = () => {
         transition={{ duration: 0.6 }}
       >
         <Typography variant="h2" sx={{ mb: 8, display: 'flex', alignItems: 'center' }}>
-          <Box component="span" sx={{ color: 'primary.main', mr: 2, fontSize: '1.5rem', fontWeight: 600 }}>03.</Box> Education
+          Education
         </Typography>
       </motion.div>
       
@@ -50,7 +50,7 @@ const Education = () => {
                 sx={{ 
                   display: 'flex', 
                   flexDirection: 'column', 
-                  borderRadius: 5, 
+                  borderRadius: 0, 
                   p: { xs: 3, md: 4 }, 
                   borderLeft: '4px solid', 
                   borderColor: index === 0 ? 'primary.main' : 'rgba(255,255,255,0.1)',
@@ -61,7 +61,7 @@ const Education = () => {
                   <Typography variant="h4" component="h3" sx={{ fontWeight: 600, color: 'text.primary', maxWidth: '80%' }}>
                     {edu.degree}
                   </Typography>
-                  <Typography variant="subtitle2" sx={{ color: index === 0 ? 'primary.main' : 'text.secondary', fontWeight: 600, mt: { xs: 1, sm: 0 }, backgroundColor: index === 0 ? 'rgba(179,136,255,0.1)' : 'transparent', px: 1.5, py: 0.5, borderRadius: 2 }}>
+                  <Typography variant="subtitle2" sx={{ color: index === 0 ? 'primary.main' : 'text.secondary', fontWeight: 600, mt: { xs: 1, sm: 0 }, backgroundColor: index === 0 ? 'rgba(179,136,255,0.1)' : 'transparent', px: 1.5, py: 0.5, borderRadius: 0 }}>
                     {edu.year}
                   </Typography>
                 </Box>

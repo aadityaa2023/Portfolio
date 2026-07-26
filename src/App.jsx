@@ -46,7 +46,7 @@ function App() {
       />
 
       <Header />
-      <Box component="main" sx={{ flexGrow: 1, pt: { xs: 12, md: 16 }, pb: 6 }}>
+      <Box component="main" sx={{ flexGrow: 1, pt: { xs: 10, md: 12 }, pb: 6 }}>
         <Container maxWidth="lg">
           <HeroSection />
           <Skills />

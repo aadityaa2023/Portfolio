@@ -11,9 +11,13 @@ import {
   SiMysql, 
   SiGit, 
   SiGithub, 
-  SiLinux 
+  SiLinux,
+  SiNodedotjs,
+  SiTensorflow,
+  SiOpencv
 } from 'react-icons/si';
 import { FaJava, FaDatabase } from 'react-icons/fa';
+import { TbBrandReactNative } from 'react-icons/tb';
 
 const Skills = () => {
   const allSkills = [
@@ -29,6 +33,10 @@ const Skills = () => {
     { name: 'Git', icon: <SiGit /> },
     { name: 'GitHub', icon: <SiGithub /> },
     { name: 'Linux', icon: <SiLinux /> },
+    { name: 'Node.js', icon: <SiNodedotjs /> },
+    { name: 'React Native', icon: <TbBrandReactNative /> },
+    { name: 'TensorFlow', icon: <SiTensorflow /> },
+    { name: 'OpenCV', icon: <SiOpencv /> },
   ];
 
   return (
@@ -40,7 +48,7 @@ const Skills = () => {
         transition={{ duration: 0.6 }}
       >
         <Typography variant="h2" sx={{ mb: 8, display: 'flex', alignItems: 'center' }}>
-          <Box component="span" sx={{ color: 'primary.main', mr: 2, fontSize: '1.5rem', fontWeight: 600 }}>01.</Box> Technical Arsenal
+          Technical Arsenal
         </Typography>
       </motion.div>
       
@@ -50,7 +58,7 @@ const Skills = () => {
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <Paper sx={{ p: { xs: 4, md: 6 }, borderRadius: 6, background: 'linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)' }}>
+        <Paper sx={{ p: { xs: 4, md: 6 }, borderRadius: 0, background: 'linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)' }}>
           <Grid container spacing={2}>
             {allSkills.map((skill, index) => (
               <Grid item xs={6} sm={4} md={3} key={index}>
@@ -59,7 +67,7 @@ const Skills = () => {
                     display: 'flex', 
                     alignItems: 'center', 
                     p: 2, 
-                    borderRadius: 3,
+                    borderRadius: 0,
                     backgroundColor: 'rgba(255,255,255,0.02)',
                     border: '1px solid rgba(255,255,255,0.05)',
                     transition: 'all 0.2s ease-in-out',

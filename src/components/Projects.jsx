@@ -31,7 +31,7 @@ const Projects = () => {
         transition={{ duration: 0.6 }}
       >
         <Typography variant="h2" sx={{ mb: 8, display: 'flex', alignItems: 'center' }}>
-          <Box component="span" sx={{ color: 'primary.main', mr: 2, fontSize: '1.5rem', fontWeight: 600 }}>02.</Box> Featured Work
+          Featured Work
         </Typography>
       </motion.div>
 
@@ -47,7 +47,7 @@ const Projects = () => {
               <Paper 
                 sx={{ 
                   p: { xs: 4, md: 6 }, 
-                  borderRadius: 6,
+                  borderRadius: 0,
                   display: 'flex',
                   flexDirection: 'column',
                   position: 'relative',

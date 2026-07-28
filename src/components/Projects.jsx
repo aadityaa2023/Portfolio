@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Chip, Grid, IconButton, Paper } from '@mui/material';
+import { Box, Typography, Chip, Grid, IconButton, Paper, Tooltip } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { FaGooglePlay } from 'react-icons/fa';
@@ -41,7 +41,7 @@ const Projects = () => {
   ];
 
   return (
-    <Box id="projects" sx={{ py: 10 }}>
+    <Box component="section" id="projects" sx={{ py: 10 }}>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -84,19 +84,25 @@ const Projects = () => {
                   </Typography>
                   <Box>
                     {project.github && (
-                      <IconButton href={project.github} target="_blank" size="small" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main', backgroundColor: 'rgba(179,136,255,0.1)' } }}>
-                        <GitHubIcon />
-                      </IconButton>
+                      <Tooltip title="View Source" arrow>
+                        <IconButton aria-label="GitHub Repository" href={project.github} target="_blank" size="small" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main', backgroundColor: 'rgba(179,136,255,0.1)' } }}>
+                          <GitHubIcon />
+                        </IconButton>
+                      </Tooltip>
                     )}
                     {project.live && (
-                      <IconButton href={project.live} target="_blank" size="small" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main', backgroundColor: 'rgba(179,136,255,0.1)' }, ml: 1 }}>
-                        <OpenInNewIcon />
-                      </IconButton>
+                      <Tooltip title="Live Preview" arrow>
+                        <IconButton aria-label="Live Project" href={project.live} target="_blank" size="small" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main', backgroundColor: 'rgba(179,136,255,0.1)' }, ml: 1 }}>
+                          <OpenInNewIcon />
+                        </IconButton>
+                      </Tooltip>
                     )}
                     {project.playstore && (
-                      <IconButton href={project.playstore} target="_blank" size="small" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main', backgroundColor: 'rgba(179,136,255,0.1)' }, ml: 1 }}>
-                        <FaGooglePlay size={18} />
-                      </IconButton>
+                      <Tooltip title="Play Store" arrow>
+                        <IconButton aria-label="Play Store Link" href={project.playstore} target="_blank" size="small" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main', backgroundColor: 'rgba(179,136,255,0.1)' }, ml: 1 }}>
+                          <FaGooglePlay size={18} />
+                        </IconButton>
+                      </Tooltip>
                     )}
                   </Box>
                 </Box>

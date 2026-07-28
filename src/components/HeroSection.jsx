@@ -1,11 +1,12 @@
 import React from 'react';
-import { Box, Typography, Button, Stack, IconButton, Grid, Avatar } from '@mui/material';
+import { Box, Typography, Button, Stack, IconButton, Grid, Avatar, Tooltip } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import DownloadIcon from '@mui/icons-material/Download';
 import profileImg from '../assets/profile.jpg';
 import { motion } from 'framer-motion';
+import { TypeAnimation } from 'react-type-animation';
 
 const HeroSection = () => {
   const containerVariants = {
@@ -25,7 +26,7 @@ const HeroSection = () => {
   };
 
   return (
-    <Box id="about" sx={{ pt: { xs: 2, md: 4 }, pb: { xs: 8, md: 12 } }}>
+    <Box component="section" id="about" sx={{ pt: { xs: 2, md: 4 }, pb: { xs: 8, md: 12 } }}>
       <Grid container spacing={6} alignItems="center" component={motion.div} variants={containerVariants} initial="hidden" animate="visible">
         <Grid item xs={12} md={7} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
 
@@ -49,8 +50,21 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <Typography variant="h3" sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, fontWeight: 500, color: 'text.secondary', mb: 4 }}>
-              Full-Stack Developer crafting clean, scalable, and user-centric web applications.
+            <Typography variant="h3" sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, fontWeight: 500, color: 'text.secondary', mb: 2, minHeight: { xs: '70px', md: '48px' } }}>
+              <TypeAnimation
+                sequence={[
+                  'Full-Stack Developer',
+                  2000,
+                  'AI SaaS Developer',
+                  2000,
+                  'Freelance Developer',
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                style={{ color: '#b388ff', fontWeight: 600 }}
+              />
             </Typography>
           </motion.div>
 
@@ -65,25 +79,32 @@ const HeroSection = () => {
               <Button variant="contained" color="primary" href="mailto:adityamishraniet2023@gmail.com" size="large">
                 Let's Work Together
               </Button>
-              <Button variant="outlined" color="primary" href="/resume.pdf" target="_blank" size="large" startIcon={<DownloadIcon />}>
+              <Button
+                variant="outlined"
+                href="/resume.pdf"
+                target="_blank"
+                size="large"
+                startIcon={<DownloadIcon />}
+                sx={{
+                  color: 'text.primary',
+                  border: '2px solid rgba(255,255,255,0.1)',
+                  backdropFilter: 'blur(10px)',
+                  backgroundColor: 'rgba(255,255,255,0.02)',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    borderColor: 'primary.main',
+                    backgroundColor: 'rgba(179,136,255,0.1)',
+                    boxShadow: '0 8px 25px -5px rgba(179,136,255,0.3)',
+                    transform: 'translateY(-3px)'
+                  }
+                }}
+              >
                 View Resume
               </Button>
             </Stack>
           </motion.div>
 
-          <motion.div variants={itemVariants}>
-            <Stack direction="row" spacing={2} justifyContent={{ xs: 'center', md: 'flex-start' }}>
-              <IconButton href="https://github.com/aadityaa2023" target="_blank" sx={{ color: 'text.secondary', backgroundColor: 'rgba(255,255,255,0.03)', '&:hover': { color: '#fff', backgroundColor: 'rgba(255,255,255,0.1)', transform: 'translateY(-3px)' }, transition: 'all 0.2s' }}>
-                <GitHubIcon />
-              </IconButton>
-              <IconButton href="https://www.linkedin.com/in/aditya-mishra-9bb53827b/" target="_blank" sx={{ color: 'text.secondary', backgroundColor: 'rgba(255,255,255,0.03)', '&:hover': { color: '#fff', backgroundColor: 'rgba(255,255,255,0.1)', transform: 'translateY(-3px)' }, transition: 'all 0.2s' }}>
-                <LinkedInIcon />
-              </IconButton>
-              <IconButton href="mailto:adityamishraniet2023@gmail.com" sx={{ color: 'text.secondary', backgroundColor: 'rgba(255,255,255,0.03)', '&:hover': { color: '#fff', backgroundColor: 'rgba(255,255,255,0.1)', transform: 'translateY(-3px)' }, transition: 'all 0.2s' }}>
-                <EmailIcon />
-              </IconButton>
-            </Stack>
-          </motion.div>
+
         </Grid>
 
         <Grid item xs={12} md={5} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
@@ -97,6 +118,7 @@ const HeroSection = () => {
               <Avatar
                 src={profileImg}
                 alt="Aditya Mishra"
+                imgProps={{ fetchpriority: 'high', loading: 'eager' }}
                 sx={{
                   width: { xs: 260, md: 340 },
                   height: { xs: 260, md: 340 },

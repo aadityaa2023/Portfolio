@@ -14,7 +14,8 @@ import {
   SiLinux,
   SiNodedotjs,
   SiTensorflow,
-  SiOpencv
+  SiOpencv,
+  SiElectron
 } from 'react-icons/si';
 import { FaJava, FaDatabase } from 'react-icons/fa';
 import { TbBrandReactNative } from 'react-icons/tb';
@@ -36,6 +37,7 @@ const Skills = () => {
         { name: 'React', icon: <SiReact /> },
         { name: 'Next.js', icon: <SiNextdotjs /> },
         { name: 'React Native', icon: <TbBrandReactNative /> },
+        { name: 'Electron', icon: <SiElectron /> },
       ]
     },
     {
@@ -51,7 +53,6 @@ const Skills = () => {
       title: 'Tools & Machine Learning',
       skills: [
         { name: 'Git', icon: <SiGit /> },
-        { name: 'GitHub', icon: <SiGithub /> },
         { name: 'Linux', icon: <SiLinux /> },
         { name: 'TensorFlow', icon: <SiTensorflow /> },
         { name: 'OpenCV', icon: <SiOpencv /> },
@@ -60,7 +61,7 @@ const Skills = () => {
   ];
 
   return (
-    <Box id="skills" sx={{ py: 10 }}>
+    <Box component="section" id="skills" sx={{ py: 10 }}>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

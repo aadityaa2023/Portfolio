@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aditya Mishra | Portfolio</title>
+    <meta name="theme-color" content="#050505" />
+    <title>Aditya Mishra | Full-Stack Developer</title>
     
     <!-- Meta tags for SEO & Social Sharing -->
     <meta name="description" content="Portfolio of Aditya Mishra, a software engineer specializing in web development and IoT." />
@@ -23,6 +24,20 @@
       body {
         margin: 0;
         background-color: #050505; /* Deep dark base to prevent flash */
+      }
+      /* Custom Scrollbar for Dark Mode */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #b388ff;
       }
     </style>
   </head>

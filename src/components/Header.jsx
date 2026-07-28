@@ -63,26 +63,32 @@ const Header = () => {
             
             <Box sx={{ display: { xs: 'none', md: 'block' } }}>
               {navItems.map((item) => (
-                <Link
+                <Box
                   key={item.label}
-                  to={item.href}
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                  spy={true}
-                  activeClass="active"
+                  sx={{
+                    display: 'inline-block',
+                    ml: 2,
+                    '& .active button': { color: 'primary.main', fontWeight: 600 }
+                  }}
                 >
-                  <Button
-                    sx={{
-                      color: 'text.primary',
-                      ml: 2,
-                      '&.active': { color: 'primary.main' },
-                      '&:hover': { color: 'primary.main', backgroundColor: 'rgba(0, 230, 118, 0.08)' }
-                    }}
+                  <Link
+                    to={item.href}
+                    smooth={true}
+                    duration={500}
+                    offset={-100}
+                    spy={true}
+                    activeClass="active"
                   >
-                    {item.label}
-                  </Button>
-                </Link>
+                    <Button
+                      sx={{
+                        color: 'text.primary',
+                        '&:hover': { color: 'primary.main', backgroundColor: 'rgba(0, 230, 118, 0.08)' }
+                      }}
+                    >
+                      {item.label}
+                    </Button>
+                  </Link>
+                </Box>
               ))}
             </Box>
 

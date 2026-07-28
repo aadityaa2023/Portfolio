@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Grid, Paper, IconButton } from '@mui/material';
+import { Box, Typography, Grid, Paper, IconButton, Tooltip } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { FaGooglePlay } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -23,7 +23,7 @@ const Experience = () => {
   ];
 
   return (
-    <Box id="experience" sx={{ py: 10 }}>
+    <Box component="section" id="experience" sx={{ py: 10 }}>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -79,13 +79,17 @@ const Experience = () => {
                       <Typography variant="body2" sx={{ color: 'text.primary', fontWeight: 500, mr: 1 }}>
                         {project.name}
                       </Typography>
-                      <IconButton href={project.link} target="_blank" size="small" sx={{ color: 'primary.main', p: 0.5 }}>
-                        <OpenInNewIcon fontSize="small" />
-                      </IconButton>
-                      {project.playstore && (
-                        <IconButton href={project.playstore} target="_blank" size="small" sx={{ color: 'primary.main', p: 0.5 }}>
-                          <FaGooglePlay size={14} />
+                      <Tooltip title="Live Preview" arrow>
+                        <IconButton aria-label={`Open ${project.name} live project`} href={project.link} target="_blank" size="small" sx={{ color: 'primary.main', p: 0.5 }}>
+                          <OpenInNewIcon fontSize="small" />
                         </IconButton>
+                      </Tooltip>
+                      {project.playstore && (
+                        <Tooltip title="Play Store" arrow>
+                          <IconButton aria-label={`Open ${project.name} on Play Store`} href={project.playstore} target="_blank" size="small" sx={{ color: 'primary.main', p: 0.5 }}>
+                            <FaGooglePlay size={14} />
+                          </IconButton>
+                        </Tooltip>
                       )}
                     </Box>
                   ))}

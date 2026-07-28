@@ -1,16 +1,16 @@
 import React from 'react';
 import { Box, Typography, Chip, Grid, Paper } from '@mui/material';
 import { motion } from 'framer-motion';
-import { 
-  SiPython, 
-  SiJavascript, 
-  SiReact, 
-  SiNextdotjs, 
-  SiDjango, 
-  SiMongodb, 
-  SiMysql, 
-  SiGit, 
-  SiGithub, 
+import {
+  SiPython,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiDjango,
+  SiMongodb,
+  SiMysql,
+  SiGit,
+  SiGithub,
   SiLinux,
   SiNodedotjs,
   SiTensorflow,
@@ -48,10 +48,10 @@ const Skills = () => {
         transition={{ duration: 0.6 }}
       >
         <Typography variant="h2" sx={{ mb: 8, display: 'flex', alignItems: 'center' }}>
-          Technical Arsenal
+          Technical Skills
         </Typography>
       </motion.div>
-      
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -62,11 +62,11 @@ const Skills = () => {
           <Grid container spacing={2}>
             {allSkills.map((skill, index) => (
               <Grid item xs={6} sm={4} md={3} key={index}>
-                <Box 
-                  sx={{ 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    p: 2, 
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    p: 2,
                     borderRadius: 0,
                     backgroundColor: 'rgba(255,255,255,0.02)',
                     border: '1px solid rgba(255,255,255,0.05)',

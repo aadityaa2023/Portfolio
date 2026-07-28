@@ -8,7 +8,7 @@ const Education = () => {
       degree: 'B.Tech in Computer Science and Engineering (IoT)',
       institution: 'Noida Institute of Engineering and Technology (NIET), Greater Noida, U.P.',
       year: '2023 - Pursuing',
-      score: 'SGPA: 7.3 / 10.0',
+      score: 'CGPA: 7.5 / 10.0',
     },
     {
       degree: 'Senior Secondary Schooling (12th)',
@@ -36,7 +36,7 @@ const Education = () => {
           Education
         </Typography>
       </motion.div>
-      
+
       <Grid container spacing={4}>
         {educationList.map((edu, index) => (
           <Grid item xs={12} key={index}>
@@ -46,13 +46,13 @@ const Education = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Paper 
-                sx={{ 
-                  display: 'flex', 
-                  flexDirection: 'column', 
-                  borderRadius: 0, 
-                  p: { xs: 3, md: 4 }, 
-                  borderLeft: '4px solid', 
+              <Paper
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  borderRadius: 0,
+                  p: { xs: 3, md: 4 },
+                  borderLeft: '4px solid',
                   borderColor: index === 0 ? 'primary.main' : 'rgba(255,255,255,0.1)',
                   background: 'linear-gradient(145deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%)',
                 }}

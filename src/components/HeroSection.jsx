@@ -28,14 +28,7 @@ const HeroSection = () => {
     <Box id="about" sx={{ pt: { xs: 2, md: 4 }, pb: { xs: 8, md: 12 } }}>
       <Grid container spacing={6} alignItems="center" component={motion.div} variants={containerVariants} initial="hidden" animate="visible">
         <Grid item xs={12} md={7} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-          <motion.div variants={itemVariants}>
-            <Box sx={{ display: 'inline-block', mb: 2, px: 2, py: 0.5, borderRadius: 0, backgroundColor: 'rgba(179,136,255,0.1)', border: '1px solid rgba(179,136,255,0.2)' }}>
-              <Typography variant="subtitle2" sx={{ color: 'primary.main', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                Software Engineer
-              </Typography>
-            </Box>
-          </motion.div>
-          
+
           <motion.div variants={itemVariants}>
             <Typography variant="h1" sx={{ fontSize: { xs: '3rem', md: '4.5rem' }, lineHeight: 1.1, mb: 2, color: 'text.primary' }}>
               Hi, I'm <br />
@@ -83,7 +76,7 @@ const HeroSection = () => {
           </motion.div>
         </Grid>
         
-        <Grid item xs={12} md={5} sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Grid item xs={12} md={5} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
           <motion.div
             initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}

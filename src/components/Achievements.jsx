@@ -42,7 +42,7 @@ const Achievements = () => {
                   Award Winner
                 </Typography>
               </Box>
-              
+
               <Typography variant="h5" sx={{ fontWeight: 500, color: 'text.primary', mb: 1 }}>
                 IOT and ECE Project Exhibition
               </Typography>
@@ -52,12 +52,7 @@ const Achievements = () => {
               <Box component="ul" sx={{ color: 'text.secondary', pl: 2, '& li': { mb: 2 } }}>
                 <li>
                   <Typography variant="body1" sx={{ lineHeight: 1.6 }}>
-                    Collaborated in a team to develop an IoT-enabled platform for reporting and tracking civic issues in real time.
-                  </Typography>
-                </li>
-                <li>
-                  <Typography variant="body1" sx={{ lineHeight: 1.6 }}>
-                    Integrated GPS and sensor data to map issues and notify concerned authorities instantly.
+                    Developed an autonomous vehicle prototype using computer vision for real-time lane detection, obstacle avoidance, and path planning.
                   </Typography>
                 </li>
               </Box>

@@ -3,9 +3,12 @@ import { Box, Container } from '@mui/material';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Education from './components/Education';
+import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Achievements from './components/Achievements';
+import Services from './components/Services';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -49,10 +52,13 @@ function App() {
       <Box component="main" sx={{ flexGrow: 1, pt: { xs: 10, md: 12 }, pb: 6 }}>
         <Container maxWidth="lg">
           <HeroSection />
+          <Services />
           <Skills />
           <Projects />
+          <Experience />
           <Education />
           <Achievements />
+          <Contact />
         </Container>
       </Box>
       <Footer />

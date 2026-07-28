@@ -2,16 +2,34 @@ import React from 'react';
 import { Box, Typography, Chip, Grid, IconButton, Paper } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { FaGooglePlay } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Projects = () => {
   const projectList = [
+    {
+      title: 'Fitforge',
+      date: '2026',
+      description: 'AI-powered workout tracking, real-time pose analysis, and gamified fitness coaching. Built as a unified application to help users maintain proper form and stay motivated.',
+      tech: ['Next.js', 'AI', 'Web AI'],
+      github: 'https://github.com/aadityaa2023',
+      live: 'https://fitforge-ruddy.vercel.app/',
+    },
+    {
+      title: 'Sanil Express',
+      date: '2026',
+      description: 'A modern, responsive porter and logistics website built to streamline delivery services and connect customers with reliable transport solutions.',
+      tech: ['React', 'Web Technologies'],
+      github: 'https://github.com/aadityaa2023',
+      live: 'https://sanilexpress.netlify.app/',
+    },
     {
       title: 'LeQ Audio',
       date: 'Sept. 2024',
       description: 'An audio-based learning platform designed and built for smooth, focused, and distraction-free learning. Implemented backend logic for audio content management, user handling, and seamless playback integration.',
       tech: ['Django', 'Python'],
       github: 'https://github.com/aadityaa2023',
+      playstore: 'https://play.google.com/store/apps/details?id=com.leq.audio',
     },
     {
       title: 'IntelliHub',
@@ -30,24 +48,25 @@ const Projects = () => {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
-        <Typography variant="h2" sx={{ mb: 8, display: 'flex', alignItems: 'center' }}>
+        <Typography variant="h3" sx={{ mb: 8, display: 'flex', alignItems: 'center' }}>
           Featured Work
         </Typography>
       </motion.div>
 
       <Grid container spacing={4}>
         {projectList.map((project, index) => (
-          <Grid item xs={12} key={index}>
+          <Grid item xs={12} md={6} key={index}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.1 }}
+              style={{ height: '100%' }}
             >
               <Paper 
                 sx={{ 
-                  p: { xs: 4, md: 6 }, 
-                  borderRadius: 0,
+                  p: { xs: 3, md: 4 }, 
+                  height: '100%',
                   display: 'flex',
                   flexDirection: 'column',
                   position: 'relative',
@@ -64,20 +83,29 @@ const Projects = () => {
                     Featured Project
                   </Typography>
                   <Box>
-                    <IconButton href={project.github} target="_blank" size="small" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main', backgroundColor: 'rgba(179,136,255,0.1)' } }}>
-                      <GitHubIcon />
-                    </IconButton>
-                    <IconButton size="small" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main', backgroundColor: 'rgba(179,136,255,0.1)' }, ml: 1 }}>
-                      <OpenInNewIcon />
-                    </IconButton>
+                    {project.github && (
+                      <IconButton href={project.github} target="_blank" size="small" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main', backgroundColor: 'rgba(179,136,255,0.1)' } }}>
+                        <GitHubIcon />
+                      </IconButton>
+                    )}
+                    {project.live && (
+                      <IconButton href={project.live} target="_blank" size="small" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main', backgroundColor: 'rgba(179,136,255,0.1)' }, ml: 1 }}>
+                        <OpenInNewIcon />
+                      </IconButton>
+                    )}
+                    {project.playstore && (
+                      <IconButton href={project.playstore} target="_blank" size="small" sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main', backgroundColor: 'rgba(179,136,255,0.1)' }, ml: 1 }}>
+                        <FaGooglePlay size={18} />
+                      </IconButton>
+                    )}
                   </Box>
                 </Box>
                 
-                <Typography variant="h3" sx={{ mb: 3, color: 'text.primary' }}>
+                <Typography variant="h4" component="h3" sx={{ mb: 2, color: 'text.primary', fontWeight: 600 }}>
                   {project.title}
                 </Typography>
                 
-                <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4, fontSize: '1.1rem', lineHeight: 1.6, maxWidth: '800px' }}>
+                <Typography variant="body1" sx={{ color: 'text.secondary', mb: 3, fontSize: '1rem', lineHeight: 1.6, maxWidth: '800px' }}>
                   {project.description}
                 </Typography>
                 

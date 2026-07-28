@@ -10,18 +10,6 @@ const Education = () => {
       year: '2023 - Pursuing',
       score: 'CGPA: 7.5 / 10.0',
     },
-    {
-      degree: 'Senior Secondary Schooling (12th)',
-      institution: 'A.N Collage, Patna',
-      year: '2023',
-      score: 'Percentage: 87%',
-    },
-    {
-      degree: 'High Schooling (10th)',
-      institution: 'V.V.I Public School, Aurangabad, Bihar',
-      year: '2021',
-      score: 'Percentage: 89%',
-    },
   ];
 
   return (
@@ -32,7 +20,7 @@ const Education = () => {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
-        <Typography variant="h2" sx={{ mb: 8, display: 'flex', alignItems: 'center' }}>
+        <Typography variant="h3" sx={{ mb: 8, display: 'flex', alignItems: 'center' }}>
           Education
         </Typography>
       </motion.div>
@@ -50,7 +38,6 @@ const Education = () => {
                 sx={{
                   display: 'flex',
                   flexDirection: 'column',
-                  borderRadius: 0,
                   p: { xs: 3, md: 4 },
                   borderLeft: '4px solid',
                   borderColor: index === 0 ? 'primary.main' : 'rgba(255,255,255,0.1)',
@@ -61,7 +48,7 @@ const Education = () => {
                   <Typography variant="h4" component="h3" sx={{ fontWeight: 600, color: 'text.primary', maxWidth: '80%' }}>
                     {edu.degree}
                   </Typography>
-                  <Typography variant="subtitle2" sx={{ color: index === 0 ? 'primary.main' : 'text.secondary', fontWeight: 600, mt: { xs: 1, sm: 0 }, backgroundColor: index === 0 ? 'rgba(179,136,255,0.1)' : 'transparent', px: 1.5, py: 0.5, borderRadius: 0 }}>
+                  <Typography variant="subtitle2" sx={{ color: index === 0 ? 'primary.main' : 'text.secondary', fontWeight: 600, mt: { xs: 1, sm: 0 }, backgroundColor: index === 0 ? 'rgba(179,136,255,0.1)' : 'transparent', px: 1.5, py: 0.5, borderRadius: 1 }}>
                     {edu.year}
                   </Typography>
                 </Box>

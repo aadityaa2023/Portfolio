@@ -57,13 +57,12 @@ const theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 0, // Sharp edges
+    borderRadius: 16, // Softer, modern edges
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 0,
           padding: '10px 28px',
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         },
@@ -115,7 +114,6 @@ const theme = createTheme({
     MuiChip: {
       styleOverrides: {
         root: {
-          borderRadius: 0,
           backgroundColor: 'rgba(255,255,255,0.03)',
           border: '1px solid rgba(255,255,255,0.08)',
           fontWeight: 500,

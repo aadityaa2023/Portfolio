@@ -44,20 +44,39 @@ const Education = () => {
                   background: 'linear-gradient(145deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%)',
                 }}
               >
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', mb: 2 }}>
-                  <Typography variant="h4" component="h3" sx={{ fontWeight: 600, color: 'text.primary', maxWidth: '80%' }}>
-                    {edu.degree}
-                  </Typography>
-                  <Typography variant="subtitle2" sx={{ color: index === 0 ? 'primary.main' : 'text.secondary', fontWeight: 600, mt: { xs: 1, sm: 0 }, backgroundColor: index === 0 ? 'rgba(179,136,255,0.1)' : 'transparent', px: 1.5, py: 0.5, borderRadius: 1 }}>
-                    {edu.year}
-                  </Typography>
+                <Box sx={{ display: 'flex', gap: { xs: 2, sm: 3 }, flexDirection: { xs: 'column', sm: 'row' } }}>
+                  {edu.logo && (
+                    <Box
+                      component="img"
+                      src={edu.logo}
+                      alt="Institution Logo"
+                      sx={{
+                        height: { xs: 50, sm: 60 },
+                        width: 'auto',
+                        filter: 'brightness(0) invert(1)',
+                        opacity: 0.9,
+                        flexShrink: 0,
+                        alignSelf: { xs: 'flex-start', sm: 'flex-start' }
+                      }}
+                    />
+                  )}
+                  <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', mb: 1, gap: 1 }}>
+                      <Typography variant="h4" component="h3" sx={{ fontWeight: 600, color: 'text.primary' }}>
+                        {edu.degree}
+                      </Typography>
+                      <Typography variant="subtitle2" sx={{ color: index === 0 ? 'primary.main' : 'text.secondary', fontWeight: 600, backgroundColor: index === 0 ? 'rgba(179,136,255,0.1)' : 'transparent', px: 1.5, py: 0.5, borderRadius: 1 }}>
+                        {edu.year}
+                      </Typography>
+                    </Box>
+                    <Typography variant="h6" sx={{ color: 'text.secondary', mb: 1, fontWeight: 400 }}>
+                      {edu.institution}
+                    </Typography>
+                    <Typography variant="body1" sx={{ color: 'secondary.main', fontFamily: 'monospace' }}>
+                      {edu.score}
+                    </Typography>
+                  </Box>
                 </Box>
-                <Typography variant="h6" sx={{ color: 'text.secondary', mb: 1, fontWeight: 400 }}>
-                  {edu.institution}
-                </Typography>
-                <Typography variant="body1" sx={{ color: 'secondary.main', fontFamily: 'monospace' }}>
-                  {edu.score}
-                </Typography>
               </Paper>
             </motion.div>
           </Grid>

@@ -7,37 +7,37 @@ const Services = () => {
   const servicesList = [
     {
       title: 'Custom Web Development',
-      description: 'Building responsive, fast, and scalable web applications from scratch using modern frameworks like React and Next.js. I focus on creating seamless user experiences that drive engagement and convert visitors into customers.',
+      description: 'Building responsive and scalable web apps using React and Next.js, focused on seamless user experiences.',
       icon: <FaLaptopCode size={40} />,
       color: '#00e676'
     },
     {
       title: 'Backend & API Development',
-      description: 'Designing robust and secure backend architectures using Node.js and Django. I build scalable RESTful APIs, manage databases (SQL/NoSQL), and ensure your application logic runs flawlessly under heavy loads.',
+      description: 'Designing secure backend architectures and scalable RESTful APIs using Node.js and Django for flawless performance.',
       icon: <FaServer size={40} />,
       color: '#b388ff'
     },
     {
       title: 'UI/UX & Frontend Polish',
-      description: 'Transforming complex interfaces into intuitive, accessible, and pixel-perfect designs. I leverage tools like Material-UI and Framer Motion to bring dynamic, high-performance visual experiences to life.',
+      description: 'Transforming complex interfaces into intuitive, pixel-perfect designs with dynamic animations and high performance.',
       icon: <FaPaintBrush size={40} />,
       color: '#ff4081'
     },
     {
       title: 'Mobile App Development',
-      description: 'Building native and cross-platform mobile applications that provide smooth, engaging user experiences. From initial concept to App Store deployment, I ensure your mobile presence is fast and reliable.',
+      description: 'Building smooth, engaging native and cross-platform mobile apps, from initial concept to App Store deployment.',
       icon: <FaMobileAlt size={40} />,
       color: '#29b6f6'
     },
     {
       title: 'AI SaaS Solutions',
-      description: 'Developing AI-powered Software as a Service platforms. I integrate large language models (LLMs) and custom machine learning pipelines to automate workflows and create intelligent, scalable products.',
+      description: 'Developing AI-powered SaaS platforms by integrating LLMs and custom ML pipelines to automate workflows.',
       icon: <FaRobot size={40} />,
       color: '#ffb300'
     },
     {
       title: 'Research Paper Writing',
-      description: 'Crafting high-quality, technically sound research papers and technical documentation. I assist with literature reviews, methodology design, data analysis, and preparing manuscripts for publication.',
+      description: 'Crafting high-quality research papers and technical documentation, from methodology design to manuscript publication.',
       icon: <FaBookOpen size={40} />,
       color: '#f06292'
     }
@@ -55,7 +55,7 @@ const Services = () => {
           Services
         </Typography>
         <Typography variant="h6" sx={{ color: 'text.secondary', mb: 8, fontWeight: 400, maxWidth: '800px' }}>
-          As a freelance developer, I partner with clients to deliver high-quality technical solutions tailored to their specific business needs.
+          Delivering high-quality, tailored technical solutions for your business.
         </Typography>
       </motion.div>
 
